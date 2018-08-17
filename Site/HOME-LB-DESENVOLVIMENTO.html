@@ -1,0 +1,787 @@
+<html lang="pt-BR">
+   <head>
+      <title> Home - LB Desenvolvimento </title>
+      <meta charset="utf-8"> 
+	  <meta name="viewport" content="widht=device-widht, initial-scale=1"> 
+      <link rel="shortcut icon" href="icon/logo.png">	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="css/galeria.css" type="text/css" media="screen">
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css" >
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" type="text/css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> </script>
+	  
+	  <style>
+
+	  
+	  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #1ebef4;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #1eb3f4;
+      font-size: 50px;
+  }
+  .logo {
+      color: #1eb3f4;
+      font-size: 200px;
+  }
+  .thumbnail {
+  
+      width: 100%;
+      height: 100%;
+  
+  
+      padding: 0 0 10px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 40%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #1eb3f4;
+  }
+  .carousel-indicators li {
+      border-color: #1eb3f4;
+  }
+  .carousel-indicators li.active {
+      background-color: #1eb3f4;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #1eb3f4; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #1eb3f4;
+      background-color: #fff !important;
+      color: #1eb3f4;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #1eb3f4 !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #1eb3f4;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #1ea9f4;
+      z-index: 9999;
+      border: 2;
+      font-size: 14px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 6px;
+      border-radius: 2;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #1ea9f4;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 100px;
+    }
+  }
+    
+	  
+	  </style>
+	  
+   </head>
+   
+ <body class="myPage" data-spy="scroll" data-target=".navbar" data-offset="70">
+ 
+ <nav class="navbar navbar-default navbar-fixed-top">
+   <div class="container">
+     <div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	    <span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>	
+	  <a class="navbar-brand" href="#top"> <img src="icon/logo.png" height="30px" width="30px" align="left"> </a>
+	 </div>
+	 
+	 <div class="collapse navbar-collapse" id="myNavbar">
+	   <ul class="nav navbar-nav navbar-right">
+	      <li> <a href="#sobre" class="active"> Sobre </a> </li>
+		  <li> <a href="#galeria"> Modelos </a> </li>
+		  <li> <a href="#opiniao"> Dê a sua opinião </a> </li>
+		  <li> <a href="#contato"> Contato </a> </li>
+	   </ul>
+	 </div> 
+   </div>
+</nav>
+ 
+ 
+ 
+ <div id="top" class="jumbotron text-center">
+   <h1> LB Desenvolvimento </h1>
+   <p> Ambientes residenciais tecnológicos </p>
+ 
+ </div>
+ 
+ 
+ 
+ <!--  --> 
+ <div id="sobre" class="container-fluid">
+     <div class="col-sm-8">
+	    <h2>Sobre a empresa</h2>
+		<h4>A LB Desenvolvimento é uma empresa criada por profissionais das áreas de Design de Interiores Teccnológicos e Venda de Imóveis, que desde 2005 vem atuando na composição de ambientes modernizados.  Originada e atualmente situada na cidade de São Paulo, estado de SP, a empresa estende e oferece seus serviços a todas as cidades e estados do Brasil.<br>O objetivo principal da LB Desenvolvimento desde sua criação, sempre foi atender as necessidades de cada cliente de forma única e especial, oferecendo opções e ideias de como conceber ambientes, sejam eles residências ou espaços comerciais. E para isso, a empresa conta com profissionais especializados e altamente qualificados!<br>Conta-se também com uma equipe de profissionais experientes e especializados na área da marcenaria, que realizam a fabricação e instalação dos móveis e de aparelhos eletrônicos. Estes profissionais ao seguirem com precisão os dados e medidas presentes nos projetos, são os responsáveis por transformarem os sonhos dos clientes em realidade.</h4>
+	 </div>
+	  <div class="col-sm-4">
+	     <img src="icon/logo.png" width="300px" height="300px"> </img>
+	  </div>   
+ </div>
+ 
+ 
+ 
+ <div class="container-fluid bg-grey">
+   <div class="row">
+   </div>
+ </div>  
+      
+	 
+	 <!--carrossel -->
+	 <div class="container">
+	   <h2>  </h2>
+	   <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	   
+	    <ol class="carousel-indicators">
+		  <li data-target="#myCarousel" data-slide to="0"> </li>
+		  <li data-target="#myCarousel" data-slide to="1"> </li>
+		  <li data-target="#myCarousel" data-slide to="2"> </li>
+		  <li data-target="#myCarousel" data-slide to="3"> </li>
+		  <li data-target="#myCarousel" data-slide to="4"> </li>
+		  <li data-target="#myCarousel" data-slide to="5"> </li>
+		  <li data-target="#myCarousel" data-slide to="6"> </li>
+		  <li data-target="#myCarousel" data-slide to="7"> </li>
+		</ol>
+	  
+ <div class="container"> 
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3"></li>
+	  <li data-target="#myCarousel" data-slide-to="4"></li>
+	  <li data-target="#myCarousel" data-slide-to="5"></li>
+	  <li data-target="#myCarousel" data-slide-to="6"></li>
+	  <li data-target="#myCarousel" data-slide-to="7"></li>
+    </ol>
+
+	
+	
+    <!-- Carossel -->
+    <div class="carousel-inner">
+	
+      <div class="item active">
+        <img src="imgspagas/1.jpg" alt="Los Angeles" style="width:100%;height:70%">
+      </div>
+
+      <div class="item">
+        <img src="imgspagas/2.jpg" alt="Item" style="width:100%;height:70%">
+      </div>
+    
+	 <div class="item">
+        <img src="imgspagas/3.jpg" alt="Item" style="width:100%;height:70%">
+      </div>
+	  
+	  <div class="item">
+        <img src="imgspagas/4.jpg" alt="Item" style="width:100%;height:70%">
+      </div>
+	  
+	  <div class="item">
+        <img src="imgspagas/5.jpg" alt="Item" wstyle="width:100%;height:70%">
+      </div>
+	  
+	  <div class="item">
+        <img src="imgspagas/6.jpg" alt="Item" style="width:100%;height:70%">
+      </div>
+	  
+	  <div class="item">
+        <img src="imgspagas/7.jpg" alt="Item" style="width:100%;height:70%">
+      </div>
+     
+	 
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+	
+</div>
+	 
+<!-- Fim Carrosel -->	 
+	 
+	 
+	 
+<div class="container-fluid bg-grey">
+   <div class="row">
+   </div>
+ </div>  
+ 
+ <hr>
+ 
+
+ <!-- GALERIA -->
+ 
+   <section>
+  <div id="galeria" class="container gal-container">
+    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#1">
+          <img src="imgspagas/galeria/1.jpg">
+        </a>
+        <div class="modal fade" id="1" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/1.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the first one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#2">
+          <img src="imgspagas/galeria/2.jpg">
+        </a>
+        <div class="modal fade" id="2" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/2.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the second one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#3">
+          <img src="imgspagas/galeria/3.jpg">
+        </a>
+        <div class="modal fade" id="3" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/3.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the third one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#4">
+          <img src="imgspagas/galeria/4.jpg">
+        </a>
+        <div class="modal fade" id="4" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/4.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the fourth one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#5">
+          <img src="imgspagas/galeria/5.jpg">
+        </a>
+        <div class="modal fade" id="5" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/5.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the fifth one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#6">
+          <img src="imgspagas/galeria/6.jpg">
+        </a>
+        <div class="modal fade" id="6" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/6.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the sixth one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#7">
+          <img src="imgspagas/galeria/7.jpg">
+        </a>
+        <div class="modal fade" id="7" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/7.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the seventh one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#8">
+          <img src="imgspagas/galeria/8.jpg">
+        </a>
+        <div class="modal fade" id="8" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/8.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the eighth one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#9">
+          <img src="imgspagas/galeria/9.jpg">
+        </a>
+        <div class="modal fade" id="9" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/9.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the ninth one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-sm-12 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#10">
+          <img src="imgspagas/galeria/10.jpg">
+        </a>
+        <div class="modal fade" id="10" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/10.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the tenth one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#11">
+          <img src="imgspagas/galeria/11.jpg">
+        </a>
+        <div class="modal fade" id="11" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/11.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the leventh one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#12">
+          <img src="imgspagas/galeria/12.jpg">
+        </a>
+        <div class="modal fade" id="12" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/12.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the 12th one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#13">
+          <img src="imgspagas/galeria/13.jpg">
+        </a>
+        <div class="modal fade" id="13" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/13.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the 13th one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#14">
+          <img src="imgspagas/galeria/14.jpg">
+        </a>
+        <div class="modal fade" id="14" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/14.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the 14th one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#15">
+          <img src="imgspagas/galeria/15.jpg">
+        </a>
+        <div class="modal fade" id="15" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/15.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the 15th one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+      <div class="box">
+        <a href="#" data-toggle="modal" data-target="#16">
+          <img src="imgspagas/galeria/16.jpg">
+        </a>
+        <div class="modal fade" id="16" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <div class="modal-body">
+                <img src="imgspagas/galeria/16.jpg">
+              </div>
+                <div class="col-md-12 description">
+                  <h4>This is the 16th one on my Gallery</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Coded by Nabeel Kondotty - https://bootsnipp.com/snippets/33Qjo -->
+   
+<!-- FIM DA GALERIA -->
+  
+ 
+
+ 
+ <div class="container-fluid bg-grey">
+   <div class="row">
+   </div>
+ </div>  
+ 
+ 
+ 
+	<!----- Pesquisa--->
+
+<div class="container-fluid bg-grey">
+   <div class="row">
+ 
+	
+	<div id="opiniao" class="jumbotron-center">
+	  <h2 class="text-center"> Pesquisa de satisfação </h2>
+	  <p class="text-center"> Conte o que você achou dos modelos de nosso portfólio. </p>
+	  <div class="row">
+	    	
+        <div id="pesquisa" class="slideanim text-center">
+		  <div class="row">
+		    <div class="col-sm-6 form-group text-center">
+			  <input class="form-control" id="name" placeholder="Nome" type="text" requerido> 
+			</div>
+		
+                <div class="col-sm-6 form-group">
+			  <input class="form-control" id="email" placeholder="E-mail" type="text" requerido> 
+			</div>		
+		  </div>
+		  
+		  <textarea class="form-control" id="Comente" name="coments" type="text" rows="5"> </textarea><br>
+		    <div class="row">
+			  <div class="col-xs-12 form-group">
+			    <button class="btn btn-default pull-right" type="submit" onclick="return confirmacao()"> Enviar </button>
+			  </div>
+			</div>   
+		</div>	
+	 </div>
+	</div>
+
+	
+  </div>
+ </div>  	
+	
+	<!-- -->
+ 
+  
+
+<footer id="contato" class="jumbotron bg-gray">
+
+
+<h3> Siga nas redes <h3>
+
+<a href="http://twitter.com"> <p style="color:white;"> <img src="icon/twitter.png" href="" width="50px" height="50px"> Twitter</p> </a>
+
+<a href="http://twitter.com"> <p style="color:white;"> <img src="icon/face.png" href="" width="50px" height="50px"> Facebook </p> </a>
+
+<a href="http://twitter.com"> <p style="color:white;"> <img src="icon/instagram.png" href="google.com" width="50px" height="50px"> Instagram </p> </a>
+ 
+
+ <p class="text-center"> 2017 - © Todos os direitos reservados  | <img src="icon/logo.png" width="70px" height="70px"> </p>
+ 
+ <a href="#top" align="center"><p style="color:white;">Voltar ao topo <span class="glyphicon glyphicon-chevron-up"></span></p> </a>
+
+</footer> 
+ 
+ 
+ <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+ 
+ </body>
+</html>
